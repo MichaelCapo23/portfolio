@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="./assets/js/custom.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -23,37 +24,30 @@
 		<!-- Main -->
 			<div id="main">
 				<header class="major container medium">
-					<h2>We conduct experiments that
-					<br />
-					may or may not seriously
-					<br />
-					break the universe</h2>
-					<!--
-					<p>Tellus erat mauris ipsum fermentum<br />
-					etiam vivamus nunc nibh morbi.</p>
-					-->
+					<h2>Learn About Michael</h2>
+                    <p>mmemememememememememememeem</p>
 				</header>
 
 				<div class="box alt container">
 					<section class="feature left">
 						<a href="#" class="image icon fa-signal"><img src="images/pic01.jpg" alt="" /></a>
 						<div class="content">
-							<h3>The First Thing</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
+							<h3>Book Bird</h3>
+							<p>Project made by college students for college students! This application aims to aid college students with the drawn out process of buying and selling books. We hoped to make book exchange as quick and easy as possible while helping students save money in the process </p>
 						</div>
 					</section>
 					<section class="feature right">
 						<a href="#" class="image icon fa-code"><img src="images/pic02.jpg" alt="" /></a>
 						<div class="content">
-							<h3>The Second Thing</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
+                            <h3>Student Grade Table</h3>
+                            <p>This application was built with user experience as the number one priority. From every sort and search imaginable to simple, quick and easy addition of records to the database.</p>
 						</div>
 					</section>
 					<section class="feature left">
 						<a href="#" class="image icon fa-mobile"><img src="images/pic03.jpg" alt="" /></a>
 						<div class="content">
-							<h3>The Third Thing</h3>
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.</p>
+							<h3>Spotify Concerts</h3>
+							<p>Spotify Concerts aims to target music lovers such as myself. We gather your favorite artists to show where their upcoming concerts are, how much tickets are selling for and how far the venue is from you via Google Maps, SongKick, Firebase, and Spotify APIs. </p>
 						</div>
 					</section>
 				</div>
@@ -201,12 +195,31 @@
 				</div>
 				-->
 
-				<footer class="major container medium">
-					<h3>Get shady with science</h3>
-					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">Join our crew</a></li>
-					</ul>
+				<footer class="img-container major container medium">
+					<h3>Hard Earned Skills</h3>
+					<!--<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>-->
+					<div class="actions special images">
+                        <div class="top-row">
+                            <div><img src="./images/bootstrap2.png" alt="Bootstrap3"></div>
+                            <div><img src="./images/c.png" alt="C"></div>
+                            <div><img src="./images/css322.png" alt="CSS3"></div>
+                            <div><img src="./images/es6.svg" alt="ES6"></div>
+                            <div><img src="./images/firebase2.png" alt="Firebase"></div>
+                            <div><img src="./images/jQuery.png" alt="jQuery"></div>
+                            <div><img src="./images/java.webp" alt="Java"></div>
+                            <div><img src="./images/materialize2.png" alt="Materialize"></div>
+                        </div>
+                        <div class="bottom-row">
+                            <div><img src="./images/MySQL.png" alt="MySQL"></div>
+                            <div><img src="./images/node.png" alt="Node.js"></div>
+                            <div><img src="./images/php.png" alt="PHP"></div>
+                            <div><img src="./images/python.png" alt="Python"></div>
+                            <div><img src="./images/react" alt="ReactJS"></div>
+                            <div><img src="./images/redux.png" alt="Redux"></div>
+                            <div><img src="./images/git_bash.png" alt="Git"></div>
+                            <div><img src="./images/html5.png" alt="Html5"></div>
+                        </div>
+					</div>
 				</footer>
 
 			</div>
@@ -222,20 +235,23 @@
 					<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor
 					orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
 
-					<form method="post" action="#">
+					<form onsubmit="sendEmail(event)"> <!-- method="post" action="#" -->
 						<div class="row">
 							<div class="col-6 col-12-mobilep">
 								<input type="text" name="name" placeholder="Name" />
 							</div>
+                            <div class="error col-6 col-12-mobilep"></div>
 							<div class="col-6 col-12-mobilep">
-								<input type="email" name="email" placeholder="Email" />
+								<input type="email" name="contactEmail" placeholder="Email" />
 							</div>
+                            <div class="error col-6 col-12-mobilep"></div>
 							<div class="col-12">
 								<textarea name="message" placeholder="Message" rows="6"></textarea>
 							</div>
+                            <div class="error col-6 col-12-mobilep"></div>
 							<div class="col-12">
 								<ul class="actions special">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="button" value="Contact yours truly" /></li>
 								</ul>
 							</div>
 						</div>
