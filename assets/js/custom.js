@@ -1,4 +1,5 @@
-function validateContactForm(){
+function validateContactForm(event){
+    event.preventDefault();
     const tests = [
         {
 
@@ -17,8 +18,8 @@ function validateContactForm(){
 
         {
             element: "textarea[name=message]",
-            pattern: /^\w{3,}$/,
-            message: 'please enter a message of at least 3 characters consisting of only standard characters'
+            pattern: /^[a-zA-Z0-9 ]{4,}$/, <!-- /^\w{3,}$/ -->
+            message: 'please enter a message that\'s at least four characters long'
         }
     ]
 
@@ -26,16 +27,6 @@ function validateContactForm(){
         console.log("it worked!");
         sendEmail();
     }
-    // let correctCount = 0
-    // for( let testIndex = 0; testIndex < tests.length; testIndex++){
-    //     let thisTest = tests[testIndex];
-    //     if(validateInputAndDisplayError( thisTest)){
-    //         correctCount++
-    //     }
-    // }
-    // if(correctCount=== tests.length){
-    //     //send message
-    // }
 }
 
 function sendEmail() {
@@ -51,6 +42,7 @@ function sendEmail() {
 }
 
 function validateInputAndDisplayError( incomingTests ){
+    console.log("i ran");
     const element = incomingTests.element, pattern = incomingTests.pattern, errorMessage = incomingTests.message;
     const value = $( element ).val();
     const result = pattern.test( value );
@@ -61,3 +53,8 @@ function validateInputAndDisplayError( incomingTests ){
     }
     return result;
 }
+
+document.querySelector(".carousel.carousel-slider").carousel({
+    fullWidth: true
+});
+
