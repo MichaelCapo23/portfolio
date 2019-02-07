@@ -1963,7 +1963,7 @@ input, select, textarea {
 	}
 
 	header {
-		text-align: center;
+		/* text-align: center; */
 	}
 
 		header p {
@@ -2003,14 +2003,17 @@ input, select, textarea {
 			}
 
 			header.major h2 {
+				position: relative;
+				z-index: 3;
+				bottom: 10px;
 				margin: 0;
 			}
 
 			header.major p {
-				top: 0;
-				margin: 1.5em 0 0 0;
+				/* top: 0; */
+				/* margin: 1.5em 0 0 0; */
 				padding: 1.5em 1.5em 0 1.5em;
-				font-size: 1.5em;
+				font-size: .9em;
 				line-height: 1.75em;
 				border-top: solid 1px rgba(224, 224, 224, 0.75);
 				display: inline-block;
@@ -2931,7 +2934,7 @@ input, select, textarea {
 		/* Section/Article */
 
 			header.major p {
-				font-size: 1.25em;
+				font-size: .9em;
 			}
 
 		/* Header */
@@ -2977,7 +2980,7 @@ input, select, textarea {
 			}
 
 				header.major p {
-					font-size: 1.15em;
+					font-size: .9em;
 				}
 
 			footer.major {
@@ -3432,4 +3435,21 @@ a.center > img {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
+}
+
+.myPhoto {
+	position: relative;
+	max-height: 500px;
+	max-width: 500px;
+	/*border-radius: 47%;*/
+	/*z-index: 2;*/
+	/*bottom: 5%;*/
+}
+
+.sourceCode {
+	float: left;
+}
+
+.Align {
+	text-align: left;
 }
