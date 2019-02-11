@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -222,7 +223,7 @@ input, select, textarea {
 		@media screen and (max-width: 840px) {
 
 			.container {
-				width: 95% !important;
+				width: 80vw !important;
 			}
 
 		}
@@ -732,6 +733,21 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
+
+            .imgContainer {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .imgContainer > img {
+                position: relative;
+                bottom: 10px;
+                display: inline-block;
+                width: 32% !important;
+                height: 100% !important;
+            }
+
+
 
 			.row {
 				display: flex;
@@ -2011,7 +2027,9 @@ input, select, textarea {
 			header.major p {
 				/* top: 0; */
 				/* margin: 1.5em 0 0 0; */
-				padding: 1.5em 1.5em 0 1.5em;
+                /*float: right;*/
+                width: 50%;
+				padding: 1.5em 5.5em 0 1.5em;
 				font-size: .9em;
 				line-height: 1.75em;
 				border-top: solid 1px rgba(224, 224, 224, 0.75);
@@ -2691,15 +2709,15 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-		background-position: bottom center,					top left,				center center;
-		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
-		color: rgba(255, 255, 255, 0.8);
-		padding: 10em 0 20em 0;
-		position: relative;
-		text-align: center;
+		 /* background-attachment: scroll,							scroll,					fixed; */
+		 background-image: url('../../images/skyline.jpg');
+		 /* background-position:center center; */
+		 background-repeat:no-repeat;
+		  background-size: 100% 100%;
+		 color: rgba(255, 255, 255, 0.8);
+		 padding: 10em 0 20em 0;
+		 position: relative;
+		 text-align: center;
 	}
 
 		#header:before, #header:after {
@@ -2737,7 +2755,7 @@ input, select, textarea {
 		}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			color: #888888;
 		}
 
 		#header input[type="submit"],
@@ -2894,6 +2912,7 @@ input, select, textarea {
 		padding: 6em 0 5em 0;
 		position: relative;
 		z-index: 1;
+		padding-top: 0;
 	}
 
 		#main:before {
@@ -2939,7 +2958,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 8em 0 16em 0;
+				/* padding: 8em 0 16em 0; */
 			}
 
 				#header h1 {
@@ -2949,6 +2968,7 @@ input, select, textarea {
 				#header p {
 					font-size: 1.25em;
 					line-height: 1.65em;
+					color: #888888;
 				}
 
 	}
@@ -2980,6 +3000,7 @@ input, select, textarea {
 
 				header.major p {
 					font-size: .9em;
+                    width: 100%;
 				}
 
 			footer.major {
@@ -3007,10 +3028,10 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1600px 230px,					auto,							cover;
-				padding: 6em 0 12em 0;
+				/* background-attachment: scroll,							scroll,							scroll; */
+				background-image: url('../../images/skyline.jpg');
+				 background-size: 100% 100%;
+				/* padding: 6em 0 12em 0; */
 			}
 
 				#header:before {
@@ -3045,7 +3066,7 @@ input, select, textarea {
 		/* Main */
 
 			#main {
-				padding: 4em 0 3em 0;
+				/* padding: 4em 0 3em 0; */
 			}
 
 	}
@@ -3160,8 +3181,8 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-				background-size: 1280px 184px,						auto,							cover;
+				background-image: url('../../images/skyline.jpg');;
+				background-size: 100% 100%;
 				padding: 3em 0 7em 0;
 			}
 
@@ -3437,13 +3458,26 @@ a.center > img {
 }
 
 .myPhoto {
-	position: relative;
-	max-height: 500px;
-	max-width: 500px;
-	/*border-radius: 47%;*/
-	/*z-index: 2;*/
-	/*bottom: 5%;*/
+    position: relative;
+    max-height: 500px;
+    max-width: 500px;
+    display: inline-block;
+    width: 50%;
+    /*border-radius: 47%;*/
+    /*z-index: 2;*/
+    /*bottom: 5%;*/
 }
+
+.imgContainer {
+    width: 35%;
+    display: inline-block;
+}
+
+.imgContainer > img {
+    width: 90%;
+    height: 33%;
+}
+
 
 .sourceCode {
 	float: left;
