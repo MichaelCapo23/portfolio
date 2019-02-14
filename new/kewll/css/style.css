@@ -61,7 +61,7 @@ p {
 
 img {
   width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 span, a, a:hover {
@@ -1031,6 +1031,24 @@ footer p {
 
 .sourceLink {
   color: white;
+}
+
+.actualImg {
+    /* height: 100%; */
+    width: 60%;
+    height: 109px;
+}
+
+/*.imgContainer {*/
+    /*height: 300px;*/
+/*}*/
+
+.item {
+    position: relative;
+}
+
+.descriptionIMG {
+    bottom: 0
 }
 
 /*# sourceMappingURL=style.css.map */
