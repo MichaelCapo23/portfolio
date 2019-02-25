@@ -176,13 +176,12 @@ $(window).on("load", function () {
 
             data: $(this).serialize(),
 
-            success: function (data)
-
-            {
+            success: function (data) {
 
                 var messageAlert = 'alert-' + data.type;
 
-                var messageText = data.message;                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                var messageText = data.message;
+                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
 
                 if (messageAlert && messageText) {
 
@@ -196,9 +195,9 @@ $(window).on("load", function () {
 
             },
 
-            error: function(err){
+            error: function (err) {
 
-                var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+ "Unable to Send Email" + '</div>';
+                var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable to Send Email" + '</div>';
 
                 $('#contact-form').find('.messages').html(alertBox);
 
@@ -213,3 +212,4 @@ $(window).on("load", function () {
         // }
 
     });
+}
