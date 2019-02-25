@@ -197,7 +197,7 @@ $(window).on("load", function () {
 
             error: function (err) {
 
-                var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable to Send Email" + '</div>';
+                var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "currently unable able to send email. Please check internet connection" + '</div>';
 
                 $('#contact-form').find('.messages').html(alertBox);
 
@@ -208,8 +208,6 @@ $(window).on("load", function () {
         });
 
         return false;
-
-        // }
 
     });
 });
