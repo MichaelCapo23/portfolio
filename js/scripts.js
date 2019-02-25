@@ -177,6 +177,9 @@ $(window).on("load", function () {
                         }
                     }
                 });
+                var messageAlert = 'alert-' + data.type;
+                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
+                $('#contact-form').find('.messages').html(alertBox);
                 return false
             } catch {
                 var messageAlert = 'alert-' + data.type;
