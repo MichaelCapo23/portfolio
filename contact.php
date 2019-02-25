@@ -21,13 +21,19 @@ try {
     );
     mail($sendTo, $subject, $emailText, implode("\n", $headers));
     $responseArray = array('type' => 'success', 'message' => $okMessage);
-} catch (\Exception $e ) {
+} catch (\Exception $e) {
     $responseArray = array('type' => 'danger', 'message' => $errorMessage);
 }
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-    header('Content-Type: application/json');
-    echo $encoded;
-} else {
+//catch (\SoapFault $e) {}
+try {
+    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        $encoded = json_encode($responseArray);
+        header('Content-Type: application/json');
+        echo $encoded;
+    } else {
+        echo $responseArray['message'];
+    }
+} catch (\SoapFault $e) {
     echo $responseArray['message'];
-} ?>
+}
+?>
