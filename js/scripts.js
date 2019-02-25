@@ -155,35 +155,61 @@ $(window).on("load", function () {
 
 
     // contact form validator
-    $('#contact-form').validator();
+
+    $('#contact-form').validator()
+
     $('#contact-form').on('submit', function (e) {
+
         e.preventDefault();
 
         // if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data) {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
 
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                        // return false
-                    }
-                },
-                error: function (err) {
-                    // e.preventDefault();
-                    var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
+        var url = "contact.php";
+
+        $('#sendButton').text('Sending')
+
+        $.ajax({
+
+            type: "POST",
+
+            url: url,
+
+            data: $(this).serialize(),
+
+            success: function (data)
+
+            {
+
+                var messageAlert = 'alert-' + data.type;
+
+                var messageText = data.message;                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+
+                if (messageAlert && messageText) {
+
                     $('#contact-form').find('.messages').html(alertBox);
-                    // return false
-                }
-            });
-        }
-    });
 
-});
+                    $('#contact-form')[0].reset();
+
+                    $('#sendButton').text('Send Message')
+
+                }
+
+            },
+
+            error: function(err){
+
+                var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+ "Unable to Send Email" + '</div>';
+
+                $('#contact-form').find('.messages').html(alertBox);
+
+                $('#sendButton').text('Send Message')
+
+            }
+
+        });
+
+        return false;
+
+        // }
+
+    });
