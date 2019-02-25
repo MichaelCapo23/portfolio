@@ -156,7 +156,6 @@ $(window).on("load", function () {
 
     // contact form validator
     $('#contact-form').validator();
-    debugger;
     $('#contact-form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
             var url = "contact.php";
@@ -165,8 +164,6 @@ $(window).on("load", function () {
                 url: url,
                 data: $(this).serialize(),
                 success: function (data) {
-                    console.log('2');
-
                     var messageAlert = 'alert-' + data.type;
                     var messageText = data.message;
 
@@ -174,12 +171,13 @@ $(window).on("load", function () {
                     if (messageAlert && messageText) {
                         $('#contact-form').find('.messages').html(alertBox);
                         $('#contact-form')[0].reset();
+                        return false
                     }
                 },
                 error: function (err) {
-                    console.log('1');
                     var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
                     $('#contact-form').find('.messages').html(alertBox);
+                    return false
                 }
             });
         }
