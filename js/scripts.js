@@ -176,7 +176,7 @@ $(window).on("load", function () {
                         $('#contact-form')[0].reset();
                     }
                 },
-                failure: function (err) {
+                error: function (err) {
                     console.log('1');
                     var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
                     $('#contact-form').find('.messages').html(alertBox);
