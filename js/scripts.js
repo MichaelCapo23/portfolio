@@ -169,6 +169,7 @@ $(window).on("load", function () {
 
                     var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
                     if (messageAlert && messageText) {
+                        e.preventDefault();
                         $('#contact-form').find('.messages').html(alertBox);
                         $('#contact-form')[0].reset();
                         return false
