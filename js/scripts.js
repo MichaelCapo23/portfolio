@@ -160,7 +160,9 @@ $(window).on("load",function (){
 
     // contact form validator
     $('#contact-form').validator();
+    debugger;
     $('#contact-form').on('submit', function (e) {
+        debugger;
         try {
             if (!e.isDefaultPrevented()) {
                 var url = "contact.php";
