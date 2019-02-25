@@ -159,34 +159,29 @@ $(window).on("load", function () {
     debugger;
     $('#contact-form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
-            try {
-                var url = "contact.php";
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: $(this).serialize(),
-                    success: function (data) {
-                        var messageAlert = 'alert-' + data.type;
-                        var messageText = data.message;
+            var url = "contact.php";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data) {
+                    console.log('2');
 
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                        if (messageAlert && messageText) {
-                            $('#contact-form').find('.messages').html(alertBox);
-                            $('#contact-form')[0].reset();
-                        }
-                    }, failure: function (err) {
-                        var messageAlert = 'alert-' + data.type;
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    if (messageAlert && messageText) {
                         $('#contact-form').find('.messages').html(alertBox);
+                        $('#contact-form')[0].reset();
                     }
-                });
-                return false
-            } catch {
-                var messageAlert = 'alert-' + data.type;
-                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
-                $('#contact-form').find('.messages').html(alertBox);
-                return false
-            }
+                },
+                failure: function (err) {
+                    console.log('1');
+                    var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "Unable To Send Email" + '</div>';
+                    $('#contact-form').find('.messages').html(alertBox);
+                }
+            });
         }
     });
 
