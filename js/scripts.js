@@ -181,7 +181,6 @@ $(window).on("load",function (){
                         }
                     }
                 });
-                return false;
             }
         } catch {
             var messageAlert = 'alert-' + data.type;
