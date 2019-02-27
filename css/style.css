@@ -1065,9 +1065,9 @@ img {
 @media screen and (max-width: 1189px) {
   .my_picture {
     position: relative;
-    left: 15.3%;
+    left: 24%;
     display: inline-block;
-    width: 34%;
+    width: 28%;
     height: 100%;
   }
 
@@ -1124,6 +1124,15 @@ img {
 
   .aboutMe {
     width:120%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .my_picture {
+    width: 49%;
+    height: 100%;
+    position: relative;
+    left: 2px
   }
 }
 
