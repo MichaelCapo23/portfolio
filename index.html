@@ -139,16 +139,17 @@
 <section class="hero section-padding" data-scroll-index="1">
     <div class="container">
         <div class="row">
-            <!--<div class="author-img">-->
-            <img class="my_picture" src="./images/IMG_0546.JPG" alt="">
+            <div class=" imgContainer">
+            <img class="my_picture firstPic" src="./images/selfieaboutme.jpg" alt="">
+            <img class="my_picture secondPic" src="./images/selfieaboutme2.jpg" alt="">
             <!--<img class="img col-md-5 col-lg-12" src="./images/redux.png" alt="">-->
-            <!--</div>-->
+            </div>
 
-            <div class="col-lg-7">
+            <div class="textbox"> <!--col-md-12 col-lg-7-->
                 <div class="content">
-                    <h4>I'm Michael Capobianco</h4>
-                    <span>Full Stack Web Developer</span>
-                    <p>My name is Michael Capobianco, and I am a web developer with a passion for creating, worthwhile
+                    <h4 class="name">I'm Michael Capobianco</h4>
+                    <span class="desc">Full Stack Web Developer</span>
+                    <p class="aboutMe">My name is Michael Capobianco, and I am a web developer with a passion for creating, worthwhile
                         products that benefit the lives of those who use them. Whether it was during school or at work,
                         learning the latest technology is something that has always peaked my interest. I got myself
                         started in the tech industry by working at Coastline Micro. While at Coastline Micro my job was
@@ -491,7 +492,7 @@
             <div class="owl-carousel owl-theme col-sm-12">
                 <div class="item mb-30">
                     <div class="post-img">
-                        <img src="img/blog/1.jpg" alt="">
+                        <img class="projectImg" src="./images/bookbird.png" alt="">
                     </div>
                     <div class="content">
                         <h5><a href="#0">BookBird</a></h5>
@@ -499,15 +500,15 @@
                             students with the drawn out process of buying and selling books. We hoped to make book
                             exchange as quick and easy as possible while helping students save money in the process.
                             <br><a class="sourceLink" href="https://github.com/Learning-Fuze/c1018_collegecraigslist">View
-                                Source Code Here!</a> | <a class="sourceLink"
-                                                           href="https://github.com/Learning-Fuze/c1018_collegecraigslist">Live</a>
+                                Source Code Here!</a> | <a class="sourceLink" target="_blank"
+                                                           href="http://www.bookbird.store/">Live</a>
                         </p>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="post-img">
-                        <img src="img/blog/2.jpg" alt="">
+                        <img class="projectImg" src="./images/sgt.PNG" alt="">
                     </div>
                     <div class="content">
                         <h5><a href="#0">Student Grade Table</a></h5>
@@ -516,22 +517,21 @@
                             PHP, ReactJS with Redux, MySQL and the materialize CSS library.
                             <br> <a class="sourceLink" href="https://github.com/MichaelCapo23/sgt_php">View Source Code
                                 Here!</a> | <a class="sourceLink"
-                                               href="https://github.com/MichaelCapo23/sgt_php">Live</a></p>
+                                               href="http://sgt.thecapobianco.com/">Live</a></p>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="post-img">
-                        <img src="img/blog/3.jpg" alt="">
+                        <img class="projectImg" src="./images/wordsearch.PNG" alt="">
                     </div>
                     <div class="content">
                         <h5><a href="#0">Hackathon Project</a></h5>
-                        <p>Spotify Concerts aims to target music lovers such as myself. We gather your favorite artists
-                            to show where their upcoming concerts are, how much tickets are selling for and how far the
-                            venue is from you via Google Maps, SongKick, Firebase, and Spotify APIs.
-                            <br><a class="sourceLink" href="https://github.com/MichaelCapo23/Hackathon-2/tree/dev">View
+                        <p>This Word Search game was built to deliver a simplistic, easy to understand experience.
+                            The application was built with HTML/CSS javascript, jQuery, and the Materialize library.
+                            <br><a class="sourceLink" href="https://github.com/MichaelCapo23/word-match">View
                                 Source Code Here!</a> | <a class="sourceLink"
-                                                           href="https://github.com/MichaelCapo23/Hackathon-2/tree/dev">Live</a>
+                                                           href="https://github.com/MichaelCapo23/word-match">Live</a>
                         </p>
                     </div>
                 </div>
@@ -616,10 +616,10 @@
                             </div>
 
                             <div class="col-md-12">
-                                <button type="submit" class="butn butn-bg"><span>Send Message</span></button>
+                                <button type="submit" class="butn butn-bg"><span id="sendButton">Send Message</span></button>
                                 <div class="info">
-                                    <span><strong>Email</strong> : Michaelacapo23@gmail.com</span>
-                                    <span><strong>Phone</strong> : (949) 922-6065</span>
+                                    <span><strong>Email</strong> : <a href="https://accounts.google.com/signin">Michaelacapo23@gmail.com</a></span>
+                                    <span><strong>Phone</strong> : <a href="">(949)922-6065</a></span>
                                 </div>
                             </div>
 
@@ -646,7 +646,7 @@
             <!--<a href="#0"><i class="fab fa-facebook-f"></i></a>-->
             <!--<a href="#0"><i class="fab fa-twitter"></i></a>-->
             <!--<a href="#0"><i class="fab fa-instagram"></i></a>-->
-            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/michaelacapobainco"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/MichaelCapo23"><i class="fab fa-github"></i></a>
             <!--<a href="#0"><i class="fab fa-behance"></i></a>-->
         </div>

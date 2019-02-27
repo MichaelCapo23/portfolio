@@ -1058,9 +1058,73 @@ img {
   color: white !important;
 }
 
-.my_picture {
-  width: 25%;
-  heihgt: 25%;
+.projectImg {
+  min-height: 200px;
+}
+
+@media screen and (max-width: 1189px) {
+  .my_picture {
+    position: relative;
+    left: 15.3%;
+    display: inline-block;
+    width: 34%;
+    height: 100%;
+  }
+
+  .desc {
+    width: 100%;
+  }
+
+  .name, .desc{
+    text-align: center;
+  }
+
+  .imgContainer {
+    height: 173px;
+  }
+}
+
+@media screen and (min-width: 1295px) {
+  .desc {
+    width: 100% ;
+  }
+
+  .name, .desc{
+    text-align: center;
+  }
+
+  .imgContainer {
+    height: 173px;
+  }
+
+  .textbox {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .imgContainer {
+    width: 25%;
+    height: 25%;
+  }
+
+  .firstPic {
+    margin-top: 33%;
+    margin-bottom: 12%;
+  }
+
+  .my_picture {
+    width: 100%;
+    height: 25%;
+  }
+
+  .textbox {
+    max-width: 58.333333%;
+  }
+
+  .aboutMe {
+    width:120%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
