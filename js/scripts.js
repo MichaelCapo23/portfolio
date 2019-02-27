@@ -160,7 +160,7 @@ $(window).on("load", function () {
 
     $('#contact-form').on('submit', function (e) {
 
-        e.preventDefault();
+        // e.preventDefault();
 
         if (!e.isDefaultPrevented()) {
 
