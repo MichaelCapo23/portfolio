@@ -181,7 +181,7 @@ $(window).on("load", function () {
                     var messageAlert = 'alert-' + data.type;
 
                     var messageText = data.message;
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    var alertBox = '<div class="errormessage alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
 
                     if (messageAlert && messageText) {
 
