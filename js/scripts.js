@@ -162,52 +162,53 @@ $(window).on("load", function () {
 
         e.preventDefault();
 
-        // if (!e.isDefaultPrevented()) {
+        if (!e.isDefaultPrevented()) {
 
-        var url = "contact.php";
+            var url = "contact.php";
 
-        $('#sendButton').text('Sending')
+            $('#sendButton').text('Sending')
 
-        $.ajax({
+            $.ajax({
 
-            type: "POST",
+                type: "POST",
 
-            url: url,
+                url: url,
 
-            data: $(this).serialize(),
+                data: $(this).serialize(),
 
-            success: function (data) {
+                success: function (data) {
 
-                var messageAlert = 'alert-' + data.type;
+                    var messageAlert = 'alert-' + data.type;
 
-                var messageText = data.message;
-                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    var messageText = data.message;
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
 
-                if (messageAlert && messageText) {
+                    if (messageAlert && messageText) {
+
+                        $('#contact-form').find('.messages').html(alertBox);
+
+                        $('#contact-form')[0].reset();
+
+                        $('#sendButton').text('Send Message')
+
+                    }
+
+                },
+
+                error: function (err) {
+
+                    var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "currently unable able to send email. Please check internet connection" + '</div>';
 
                     $('#contact-form').find('.messages').html(alertBox);
-
-                    $('#contact-form')[0].reset();
 
                     $('#sendButton').text('Send Message')
 
                 }
 
-            },
+            });
 
-            error: function (err) {
-
-                var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "currently unable able to send email. Please check internet connection" + '</div>';
-
-                $('#contact-form').find('.messages').html(alertBox);
-
-                $('#sendButton').text('Send Message')
-
-            }
-
-        });
-
-        return false;
+            return false;
+        }
 
     });
 });
