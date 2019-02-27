@@ -181,7 +181,7 @@ $(window).on("load", function () {
                     var messageAlert = 'alert-' + data.type;
 
                     var messageText = data.message;
-                    var alertBox = '<div class="errormessage alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
 
                     if (messageAlert && messageText) {
 
@@ -197,7 +197,7 @@ $(window).on("load", function () {
 
                 error: function (err) {
 
-                    var alertBox = '<div class="alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "currently unable able to send email. Please check internet connection" + '</div>';
+                    var alertBox = '<div class="errormessage alert alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + "currently unable able to send email. Please check internet connection" + '</div>';
 
                     $('#contact-form').find('.messages').html(alertBox);
 
